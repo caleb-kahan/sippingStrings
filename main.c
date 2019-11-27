@@ -9,6 +9,7 @@ int main(){
   char line [100]  = "ls -a -l";
   char ** args = parse_args( line );
   execvp(args[0], args);
+  free(args);
   return 0;
 }
 
